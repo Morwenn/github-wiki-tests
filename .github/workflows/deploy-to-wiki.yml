@@ -5,7 +5,8 @@ on:
     branches:
       - trunk
     paths:
-      - 'docs/**'    
+      - 'docs/**'
+      - '.github/workflows/deploy-to-wiki.yml'
 
 jobs:
   sync-wiki-files:
@@ -21,4 +22,4 @@ jobs:
         with:
           path: docs/
         env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.DEPLOY_TO_WIKI_ACCESS_TOKEN }}
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
