@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Checkout wiki files
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           repository: ${{github.repository}}.wiki 
           path: tmp
