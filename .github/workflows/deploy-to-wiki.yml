@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ${{github.repository}}.wiki 
-          path: tmp
+          path: ${{runner.workspace}}/tmp
 
       - name: Sync wiki files
         run: |
