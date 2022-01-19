@@ -22,14 +22,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ${{github.repository}}.wiki 
-          path: ${{runner.workspace}}/tmp
+          path: tmp
 
       - name: Sync wiki files
         run: |
           rsync -avzr --delete --exclude='.git/' "docs/" "tmp/" || exit 1
 
       - name: Commit wiki files
-        working-directory: ${{runner.workspace}}/tmp
+        working-directory: ${{runner.workspace}}/${{github.repository}}/tmp
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -39,5 +39,5 @@ jobs:
       - name: Push changes to wiki
         uses: ad-m/github-push-action@master
         with:
-          directory: ${{runner.workspace}}/tmp
+          directory: ${{runner.workspace}}/${{github.repository}}/tmp
           repository: ${{github.repository}}.wiki
