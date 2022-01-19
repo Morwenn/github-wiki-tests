@@ -17,19 +17,22 @@ jobs:
     steps:
       - name: Checkout /docs
         uses: actions/checkout@v2
+        with:
+          repository: ${{github.repository}}
+          path: main
 
       - name: Checkout wiki files
         uses: actions/checkout@v2
         with:
-          repository: ${{github.repository}}.wiki 
-          path: tmp
+          repository: ${{github.repository}}.wiki
+          path: wiki
 
       - name: Sync wiki files
         run: |
-          rsync -avzr --delete --exclude='.git/' "docs/" "tmp/" || exit 1
+          rsync -avzr --delete --exclude='.git/' "main/docs/" "wiki/"
 
       - name: Commit wiki files
-        working-directory: ${{github.repository}}/tmp
+        working-directory: wiki
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -39,5 +42,5 @@ jobs:
       - name: Push changes to wiki
         uses: ad-m/github-push-action@master
         with:
-          directory: ${{runner.workspace}}/${{github.repository}}/tmp
+          directory: wiki
           repository: ${{github.repository}}.wiki
