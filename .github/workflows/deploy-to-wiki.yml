@@ -44,3 +44,4 @@ jobs:
         with:
           directory: wiki
           repository: ${{github.repository}}.wiki
+          branch: master
