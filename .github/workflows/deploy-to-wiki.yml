@@ -29,7 +29,7 @@ jobs:
           rsync -avzr --delete --exclude='.git/' "docs/" "tmp/" || exit 1
 
       - name: Commit wiki files
-        working-directory: ${{runner.workspace}}/${{github.repository}}/tmp
+        working-directory: ${{github.repository}}/tmp
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
