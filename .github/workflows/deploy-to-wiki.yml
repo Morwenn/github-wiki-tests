@@ -29,9 +29,9 @@ jobs:
 
       - name: Sync wiki files
         run: |
+          find docs -name "*.md" -exec sed -i 's/.md)/)/' {} \;
+          find docs -name "*.md" -exec sed -i 's/.md#/#/' {} \;
           rsync -avzr --delete --exclude='.git/' "main/docs/" "wiki/"
-          find wiki -name "*.md" -exec sed -i 's/.md)/)/' {} \;
-          find wiki -name "*.md" -exec sed -i 's/.md#/#/' {} \;
 
       - name: Commit wiki files
         working-directory: wiki
