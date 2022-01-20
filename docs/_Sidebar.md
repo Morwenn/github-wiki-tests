@@ -16,7 +16,7 @@
 * [[Miscellaneous utilities]]
 * Tutorials
     * [[Writing a sorter]]
-    * [Writing a `bubble_sorter`](https://github.com/Morwenn/cpp-sort/wiki/writing-a-bubble_sorter)
+    * [Writing a `bubble_sorter`](Writing-a-bubble_sorter.md)
     * [[Writing a container-aware algorithm]]
 * [[Tooling]]
 * [[Benchmarks]]
