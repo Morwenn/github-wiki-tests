@@ -7,7 +7,7 @@
     * [Sorter adapters](Sorter-adapters.md)
     * [Sorter facade](Sorter-facade)
     * [Sorter traits](Sorter-traits.md)
-    * [[Measures of presortedness]]
+    * [Measures of presortedness](Measures of presortedness.md)
 * [[Comparators and projections]]
     * [[Comparators]]
     * [[Comparator adapters]]
