@@ -5,7 +5,7 @@
     * [Sorters](Sorters.md)
     * [[Fixed-size sorters]]
     * [Sorter adapters](Sorter-adapters.md)
-    * [[Sorter facade]]
+    * [Sorter facade](Sorter-facade)
     * [[Sorter traits]]
     * [[Measures of presortedness]]
 * [[Comparators and projections]]
