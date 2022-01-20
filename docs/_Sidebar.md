@@ -2,9 +2,9 @@
 * Sorting library
     * [[Library nomenclature]]
     * [[Sorting functions]]
-    * [[Sorters]]
+    * [Sorters](Sorters.md)
     * [[Fixed-size sorters]]
-    * [[Sorter adapters]]
+    * [Sorter adapters](Sorter-adapters.md)
     * [[Sorter facade]]
     * [[Sorter traits]]
     * [[Measures of presortedness]]
