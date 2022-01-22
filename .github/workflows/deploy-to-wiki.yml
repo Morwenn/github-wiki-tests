@@ -33,7 +33,7 @@ jobs:
             old=$(basename $docname);
             new=${old%.*};
             for docpath in main/docs/*.md; do
-              sed "s/$old/$new/" $docpath;
+              sed -i "s/$old/$new/" $docpath;
             done
           done
           rsync -avzr --delete --exclude='.git/' "main/docs/" "wiki/"
