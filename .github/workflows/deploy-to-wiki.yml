@@ -30,7 +30,7 @@ jobs:
       - name: Sync wiki files
         run: |
           for docname in main/docs/*.md; do
-            old=$(basename $docfile);
+            old=$(basename $docname);
             new=${old%.*};
             for docpath in main/docs/*.md; do
               sed "s/$old/$new/" $docpath;
