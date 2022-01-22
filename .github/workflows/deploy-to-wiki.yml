@@ -29,10 +29,12 @@ jobs:
 
       - name: Sync wiki files
         run: |
-          for docfile in docs/*.md; do
+          for docname in main/docs/*.md; do
             old=$(basename $docfile);
-            new=${old%.*}
-            find main/docs -name "*.md" -exec sed -i 's/$old/$new/' {} \;
+            new=${old%.*};
+            for docpath in main/docs/*.md; do
+              sed "s/$old/$new/" $docpath;
+            done
           done
           rsync -avzr --delete --exclude='.git/' "main/docs/" "wiki/"
 
