@@ -1,7 +1,5 @@
 Welcome to the **cpp-sort 1.12.1** documentation!
 
-TEST 2
-
 You probably read the introduction in the README, so I won't repeat it here. This wiki contains documentation about the library: basic documentation about the many sorting tools and how to use them, documentation about the additional utilities provided by the library and even some detailed tutorials if you ever want to write your own sorters or sorter adapters. This main page explains a few general things that didn't quite fit in other parts of the documentation.
 
 If you find a library feature which isn't documented, don't hesitate to open an issue. It generally means that we either need to hide it in a subnamespace or to let it available and document it.
@@ -79,12 +77,14 @@ A similar `CPPSORT_ENABLE_AUDITS` macro can be defined to enable audits: those a
 
 ## Miscellaneous
 
-This wiki also includes a small section about the [[original research|Original research]] that happened during the conception of the library and the results of this research. While it is not needed to understand how the library works or how to use it, it may be of interest if you want to discover new things about sorting.
+This wiki also includes a small section about the [original research][original-research] that happened during the conception of the library and the results of this research. While it is not needed to understand how the library works or how to use it, it may be of interest if you want to discover new things about sorting.
 
 If you ever feel that this wiki is incomplete, that it needs more examples or more detailed explanation about stuff, you are welcome to report it and/or contribute.
 
-*Always keep in mind that even if the library does contain production-ready algorithms, many of them are also experimental algorithms taken straight from research papers and reimplemented from scratch. If you are only interested in usable algorithms, you should look at the ones analyzed in the [[benchmarks]].*
+*Always keep in mind that even if the library does contain production-ready algorithms, many of them are also experimental algorithms taken straight from research papers and reimplemented from scratch. If you are only interested in usable algorithms, you should look at the ones analyzed in the [benchmarks][benchmarks].*
 
 Hope you have fun!
 
+  [benchmarks]: Benchmarks.md
+  [original-research]: Original-research.md
   [swappable]: https://en.cppreference.com/w/cpp/concepts/swappable

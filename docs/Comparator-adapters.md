@@ -44,7 +44,9 @@ constexpr auto base() const
 * When given `flip_t<F>`, it returns `F`.
 * When given `not_fn_t<flip_t<F>>`, it returns `not_fn_t<F>`.
 
-`flip_t` is considered [branchless][branchless-traits] when the *Callable* it wraps is considered branchless.
+`flip_t<F>` is [*transparent*][transparent-comparator] when `F` is *transparent*.
+
+`flip_t<F>` is considered [branchless][branchless-traits] when `F` is considered branchless.
 
 *New in version 1.13.0*
 
@@ -78,6 +80,8 @@ constexpr auto base() const
 * When given `not_fn_t<F>`, it returns `F`.
 * When given `flip_t<not_fn_t<F>>`, it returns `flip_t<F>`.
 
+`not_fn_t<F>` is [*transparent*][transparent-comparator] when `F` is *transparent*.
+
 *New in version 1.13.0*
 
 ### `projection_compare`
@@ -87,6 +91,8 @@ constexpr auto base() const
 ```
 
 The class template `projection_compare` can be used to embed a comparison and a projection in a single comparison object, allowing to provide projection support to algorithms that only support comparisons, such as standard library algorithms prior to C++20. Both the passed comparison and projection functions can be [*Callable*][callable].
+
+`projection_compare` is [*transparent*][transparent-comparator] when the passed comparison and projection are both *transparent*.
 
 It is accompanied by a `make_projection_compare` function template to avoid having to pass the template parameters by hand.
 
@@ -109,9 +115,10 @@ std::sort(family.begin(), family.end(), cppsort::make_projection_compare(std::gr
 
 
   [binary-predicate]: https://en.cppreference.com/w/cpp/concept/BinaryPredicate
-  [branchless-traits]: https://github.com/Morwenn/cpp-sort/wiki/Miscellaneous-utilities#branchless-traits
+  [branchless-traits]: Miscellaneous-utilities.md#branchless-traits
   [callable]: https://en.cppreference.com/w/cpp/named_req/Callable
-  [flip-prelude]: https://hackage.haskell.org/package/base-4.16.0.0/docs/Prelude.html#v:flip
+  [prelude-flip]: https://hackage.haskell.org/package/base-4.16.0.0/docs/Prelude.html#v:flip
   [std-identity]: https://en.cppreference.com/w/cpp/utility/functional/identity
   [std-not-fn]: https://en.cppreference.com/w/cpp/utility/functional/not_fn
-  [utility-identity]: https://github.com/Morwenn/cpp-sort/wiki/Miscellaneous-utilities#miscellaneous-function-objects
+  [transparent-comparator]: https://stackoverflow.com/q/20317413/1364752
+  [utility-identity]: Miscellaneous-utilities.md#miscellaneous-function-objects

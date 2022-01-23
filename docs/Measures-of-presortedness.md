@@ -323,6 +323,6 @@ T. Altman and Y. Igarashi mention the concept of *k*-sortedness and the measure 
   [hamming-distance]: https://en.wikipedia.org/wiki/Hamming_distance
   [longest-increasing-subsequence]: https://en.wikipedia.org/wiki/Longest_increasing_subsequence
   [neatsort]: https://arxiv.org/pdf/1407.6183.pdf
-  [original-research]: https://github.com/Morwenn/cpp-sort/wiki/Original-research#partial-ordering-of-mono
-  [probe-dis]: https://github.com/Morwenn/cpp-sort/wiki/Measures-of-presortedness#dis
+  [original-research]: Original-research.md#partial-ordering-of-mono
+  [probe-dis]: Measures-of-presortedness.md#dis
   [sort-race]: https://arxiv.org/ftp/arxiv/papers/1609/1609.04471.pdf
